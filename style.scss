@@ -1,0 +1,38 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+
+/////// Colors
+
+//Primary
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+//Neutral
+
+$dark-blue: hsl(234, 12%, 34%);
+$gray-blue: hsl(229, 6%, 66%);
+
+//font
+
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.heading {
+
+    font-weight: 400;
+
+    &--bold {
+        font-weight: 600;
+    }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
