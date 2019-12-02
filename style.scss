@@ -1,4 +1,4 @@
-@import url(https://fonts.google.com/specimen/Poppins);
+
 
 /////// Colors
 
@@ -13,26 +13,136 @@ $blue: hsl(212, 86%, 64%);
 
 $dark-blue: hsl(234, 12%, 34%);
 $gray-blue: hsl(229, 6%, 66%);
+$backdrop-white: rgb(250, 250, 250);
+$white: rgb(255, 255, 255);
 
-//font
+//Variables
+$gutter-horizontal: 1rem;
+$gutter-vertical: 1rem;
 
+//Columns
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+
+    [class^="col-"] {
+        float: left; }
+
+    .col-1-of-3 {
+        width: calc((100% - 2 * 1rem) / 3);
+    }
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
 
 body {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: 200;
+    background-color: $backdrop-white;
+    color: $gray-blue;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    margin-top: 90px;
+
+    &__paragraph:last-of-type {
+
+    }
+}
+
+.heading:last-of-type {
+    margin-bottom: 20px;
 }
 
 .heading {
-
-    font-weight: 400;
+    color: $dark-blue;
+    font-weight: 100;
+    font-size: 34px;
 
     &--bold {
         font-weight: 600;
     }
 }
 
+.card-container {
+    display: block;
+    height: 60rem;
+    position: relative;
+    max-width: 134.9rem;
+    margin: 0 auto;
+    margin-top: 7.5rem;
+}
+
+.card {
+    height: 25rem;
+    max-width: 35rem;
+    display: block;
+    position: absolute;
+
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px $gray-blue;
+    padding: 20px 0 0 35px;
+
+    &--1 {
+        border-top: 5px solid $cyan;
+        transform: translateY(-50%);
+        top: 45%;
+        left: 8.75%;
+    }
+
+    &--2 {
+        border-top: 5px solid $red;
+        transform: translateX(-50%);
+        right: 24%;
+    }
+
+    &--3 {
+        border-top: 5px solid $orange;
+        transform: translateX(-50%);
+        right: 24%;
+        top: 46.65%;
+    }
+
+    &--4 {
+        border-top: 5px solid $blue;
+        transform: translateY(-50%);
+        top: 45%;
+        right: 8.75%;        
+    }
+
+    &__header {
+        color: $dark-blue;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    &__icon {
+        float: right;
+        margin: 4.5rem 3rem 0 0;
+    }
+}
 
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    clear: both;
+ }
+
 .attribution a { color: hsl(228, 45%, 44%); }
